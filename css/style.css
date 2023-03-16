@@ -1,0 +1,201 @@
+/*======================
+   01. Google fonts
+========================*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/*======================
+   02. Basic css
+========================*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 26px;
+	font-size: 16px;
+	background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+	color: #666666;
+	font-family: 'Outfit', sans-serif;
+	background-repeat: no-repeat;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+
+/*======================
+   03. pricing css
+========================*/
+
+.pricing-wrapper {
+	padding: 70px 0;
+}
+
+.head-text {
+	font-size: 40px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.pricing-box {
+	overflow: hidden;
+	border-right: 2px solid #efefff;
+	background: #ffffff;
+	margin-top: 70px;
+}
+
+.pricing-box.active {
+    transform: scale(1.1);
+    border: 3px solid #ff8a43;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 9;
+}
+
+.pricing-box.active .pricing-first-content {
+	 background: linear-gradient(90deg, #ff8a43  20%, #fa7070 100%) !important;
+}
+
+.pricing-box.active .pricing-first-content p {
+	color: #ffffff !important;
+}
+
+.pricing-first-box {
+	border-radius: 10px 0 0 10px;
+}
+
+.pricing-last-box {
+	border-radius: 0 10px 10px 0;
+	border-right: 0px solid transparent !important;
+}
+
+.pricing-first-content {
+	padding: 50px 30px;
+	background: #10393b;
+}
+
+.pricing-first-content h3 {
+	text-transform: capitalize;
+	font-weight: 600;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.pricing-first-content p {
+	font-size: 14px;
+	line-height: 23px;
+	margin-top: 15px;
+	color: #cccccc;
+}
+
+.pricing-last-content {
+	padding: 35px 30px;
+}
+
+.pricing-last-content h2 {
+	font-weight: 600;
+	font-size: 42px;
+	color: #04000b;
+}
+
+.sub {
+    vertical-align: top;
+}
+
+.pricing-last-content h2 span {
+    font-size: 16px;
+}
+
+.price-color {
+	color: #fa7070 !important;
+}
+
+.pricing-last-content ul {
+	margin-top: 15px;
+}
+
+.pricing-last-content ul li i {
+	margin-right: 10px;
+}
+
+.pricing-last-content ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-box.active .custom-btn {
+	 background: linear-gradient(90deg, #ff8a43  20%, #fa7070 100%) !important;
+	 color: #ffffff !important;
+}
+
+.custom-btn {
+    border: 2px solid #dddddd;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 600;
+    border-radius: 30px;
+    color: #10393b;
+    padding: 16px 45px;
+    font-size: 14px;
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.custom-btn:hover {
+	color: #ffffff;
+}
+
+.custom-btn:hover::after {
+	transform: translateY(-45%) skew(25deg) scale(1.2);
+}
+
+.custom-btn::after {
+	position: absolute;
+	top: inherit;
+	right: inherit;
+	bottom: inherit;
+	left: -5%;
+	content: "";
+	height: 150px;
+	width: 115%;
+	z-index: -1;
+	background: #10393b;
+	transition: all 0.25s ease-in-out;
+	transform: translateY(-45%) skew(25deg) scale(0);
+}
